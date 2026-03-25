@@ -23,7 +23,7 @@ void app_main(void)
     uart_set_pin(UART_PORT, UART_TX_PIN, UART_RX_PIN, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
     uart_driver_install(UART_PORT, BUF_SIZE, 0, 0, NULL, 0);
 
-    const char *msg = "hello\r\n";
+    const char *msg = "hello world!\r\n";
 
     while (1) {
         uart_write_bytes(UART_PORT, msg, strlen(msg));
